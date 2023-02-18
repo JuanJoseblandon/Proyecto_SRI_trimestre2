@@ -1,4 +1,5 @@
 ## Instalar Pila LAMP
+La pila LAMP es necesaria para dar alojamiento a páginas web.
 ### Instalar Apache2
 Para instalar apache debemos primero estar en modo sudo su:
 ```bash
