@@ -60,3 +60,4 @@ phpinfo();
 Lo guardamos y en navegador ponemos la ruta localhost/test.php y deberiamos ver esto
 ![image](https://user-images.githubusercontent.com/91255763/219902674-02e0757f-582e-4c2d-959c-9464f2ef9e88.png)
 
+Con esto ya se podrían alojar páginas web, para ello solo habria que crear carpertas con el nombre de las paginas web en /var/www, asignarles una ip de las red interna en el archivo /etc/hosts ademas de crear un virtual host para cada página web
