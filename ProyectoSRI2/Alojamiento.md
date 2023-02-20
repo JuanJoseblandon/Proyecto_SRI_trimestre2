@@ -87,6 +87,4 @@ y volver a phpmyadmin y al iniciar sesion podras ver y manipular todas la bases 
 ![image](https://user-images.githubusercontent.com/91255763/220167854-6206c034-15da-474c-af53-c932273cfa08.png)
 
 
-
-
 Con esto ya se podrían alojar páginas web, para ello solo habria que crear carpertas con el nombre de las paginas web en /var/www, asignarles una ip de las red interna en el archivo /etc/hosts ademas de crear un virtual host para cada página web
