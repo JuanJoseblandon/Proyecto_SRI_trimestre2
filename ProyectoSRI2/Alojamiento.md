@@ -84,7 +84,8 @@ Despues debemos recarcar mysql con
 $ sudo service mysql restart
 ```
 y volver a phpmyadmin y al iniciar sesion podras ver y manipular todas la bases de datos de mysql
-![image](https://user-images.githubusercontent.com/91255763/220167762-2ddd0be6-d379-4df7-83e2-801fa1cb2d2c.png)
+![image](https://user-images.githubusercontent.com/91255763/220167854-6206c034-15da-474c-af53-c932273cfa08.png)
+
 
 
 
