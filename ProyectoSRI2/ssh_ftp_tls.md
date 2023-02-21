@@ -49,3 +49,12 @@ Despues de modificar el fichero lo guardamos y reiniciamos el servicio
 ```bash
 $ sudo service vsftpd restart
 ```
+Con esto todos los usuarios dispondran desde su creacion de un usuario ssh y sftp
+para comrpobar el acceso por ftp podemos hacerlo con el comando 
+```bash
+$ sftp nombredeusuario@ip
+```
+![image](https://user-images.githubusercontent.com/91255763/220417070-a42bfcc4-bcc6-4071-a899-f3a5ec12122a.png)
+Si disponemos de filezilla tambien podriamos conecatarnos a traves de el
+![image](https://user-images.githubusercontent.com/91255763/220419487-182c1f64-c348-45de-bc3e-85aa11553b71.png)
+
