@@ -155,5 +155,43 @@ En mi caso tengo 2 scripts para esto
         passwd $usuario
   ```
 - Se creará un subdominio en el servidor DNS con las resolución directa e inversa
+   ```bash
+          #!/bin/bash
+
+      #verificacion de argumentos validos
+      if [ $# -le 1 ];then
+         echo Error!. Introduce subdominio e IP!
+         exit 1;
+      fi
+
+
+      # Variables
+      USER=$1
+      IP=$2
+      SUB_DOMAIN="${USER}.marisma.local"
+      DOCUMENT="/var/www/${USER}.marisma.local"
+      ZONE_FILE="/etc/bind/zones/db.marisma.local"
+      REVERSE_FILE="/etc/bind/zones/db.0.4.10.in-addr.arp"
+
+      # se añaden la ip y el nombren de subdominio al dominio 
+      echo "Actualizando fichero de zona"
+      echo "\$ORIGIN ${SUB_DOMAIN}."  >> $ZONE_FILE
+      echo "@ IN  A   ${IP}"  >> $ZONE_FILE
+      echo "www   IN  A   ${IP}"  >> $ZONE_FILE
+
+      # se añaden la ip y el subdominio a hosts
+      echo "		IN	PTR	${SUB_DOMAIN}" >> $REVERSE_FILE
+      echo "${IP}	www.${SUB_DOMAIN}" >>/etc/hosts
+      echo "${IP}	${SUB_DOMAIN}" >>/etc/hosts
+      # se habilita la ejecucion de aplicaciones python
+      echo "Habilitando ejecución de aplicaciones python"
+      sudo apt install libapache2-mod-wsgi
+      # se reinician los servicios
+      echo "Reiniciar servicios"
+      service apache2 reload > /dev/null
+      service bind9 reload > /dev/null
+      service vsftp reload > /dev/null
+
+   ```
 - Se creará una base de datos además de un usuario con todos los permisos sobre dicha base de datos (ALL PRIVILEGES)
 - Se habilitará la ejecución de aplicaciones Python con el servidor web
