@@ -31,3 +31,21 @@ Una vez instalado el servicio debemos acceder al archivo de configurtacion del s
 ```bash 
 $ sudo nano /etc/vsftpd.conf
 ```
+En este archivo debemos buscar y modificar las siguientes lineas
+  - anonymous_enable=NO
+  - write_enable=YES
+  - local_umask=022
+  - chroot_local_user=YES
+  - ssl_enable=YES
+  - allow_annon_ssl=NO
+  - force_local_data_ssl=YES
+  - force_local_logins_ssl=YES
+  - ssl_tlsv1=YES
+  - ssl_tlsv2=NO
+  - ssl_tlsv3=NO
+  - rsa_cert_file=/etc/ssl/certs/ftpserver.crt
+  - rsa_private_key_file=/etc/ssl/private/ftpserver.key
+Despues de modificar el fichero lo guardamos y reiniciamos el servicio
+```bash
+$ sudo service vsftpd restart
+```
