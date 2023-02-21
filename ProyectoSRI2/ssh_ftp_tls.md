@@ -14,7 +14,12 @@ Después de esto reiniciamos el servicio ssh con
 ```bash
 $ sudo service ssh restart
 ```
-Ahora el servicio ssh ya esta operativo 
+Ahora el servicio ssh ya esta operativo para probarlo solo sebemos introducir el comando
+```bash
+$ ssh nombre_de_usuario@ip
+```
+![image](https://user-images.githubusercontent.com/91255763/220383509-af84181a-8535-45fc-b277-67b420022ea6.png)
+![image](https://user-images.githubusercontent.com/91255763/220383814-44787581-bdc5-427d-82d2-60d577399b2e.png)
 
 # Instalación de vsftp
 Este servicio provee un acceso fpt seguropara todos los usuarios. 
