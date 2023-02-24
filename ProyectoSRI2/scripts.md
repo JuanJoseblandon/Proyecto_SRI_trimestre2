@@ -212,10 +212,14 @@ En mi caso tengo 2 scripts para esto
       fi
 
      ```
-    Este script pide  un usuario de sistema existente para crear con el una base de datos con su nombre y un usuario con todos los privilegios sobre esta base de datos y tambien le permite la administración de esta atraves de phpmyadmin
-    Comprobación
+    Este script pide  un usuario de sistema existente para crear con el una base de datos con su nombre y un usuario con todos los privilegios sobre esta base de datos y tambien le permite la administración de esta atraves de phpmyadmin.
+    
+    Comprobación:
+    
     ![image](https://user-images.githubusercontent.com/91255763/220886543-d537840c-6551-4466-b00d-d9a761cbab55.png)
     ![image](https://user-images.githubusercontent.com/91255763/220886706-934343c1-fdd5-4c68-89f4-9c0d9d8722e2.png)
     ![image](https://user-images.githubusercontent.com/91255763/220887081-6a2d43c2-6597-4503-b719-9dff8be9a27b.png)
+    ![image](https://user-images.githubusercontent.com/91255763/221199489-5525244b-5504-4627-b4d4-e2286a24ee5b.png)
+
 
 - Se habilitará la ejecución de aplicaciones Python con el servidor web
