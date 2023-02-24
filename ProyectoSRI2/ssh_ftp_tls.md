@@ -4,17 +4,21 @@ Para poder proporcionar a los usuarios el acceso atraves de ssh debemos instalar
 $ sudo apt install openssh-server
 ```
 Tras instalarlo debemos modificar el fichero sshd_config
+
 ```bash
 $ sudo nano /etc/ssh/sshd_config
 ``` 
 
 En el debemos buscar la sección que especifica el purto con el que trabaja, aqui debemos descomentar la linea para que empiece a trabajar por el 
+
 ![image](https://user-images.githubusercontent.com/91255763/220370469-02ef85ff-cd84-44e3-9ac8-c2a8f96bd27a.png)
+
 Después de esto reiniciamos el servicio ssh con
 ```bash
 $ sudo service ssh restart
 ```
 Ahora el servicio ssh ya esta operativo para probarlo solo sebemos introducir el comando
+
 ```bash
 $ ssh nombre_de_usuario@ip
 ```
@@ -32,6 +36,7 @@ Una vez instalado el servicio debemos acceder al archivo de configurtacion del s
 $ sudo nano /etc/vsftpd.conf
 ```
 En este archivo debemos buscar y modificar las siguientes lineas
+```bash
   - anonymous_enable=NO
   - write_enable=YES
   - local_umask=022
@@ -45,6 +50,7 @@ En este archivo debemos buscar y modificar las siguientes lineas
   - ssl_tlsv3=NO
   - rsa_cert_file=/etc/ssl/certs/ftpserver.crt
   - rsa_private_key_file=/etc/ssl/private/ftpserver.key
+```
 Despues de modificar el fichero lo guardamos y reiniciamos el servicio
 ```bash
 $ sudo service vsftpd restart
