@@ -223,3 +223,9 @@ En mi caso tengo 2 scripts para esto
 
 
 - Se habilitará la ejecución de aplicaciones Python con el servidor web
+  Para hacer esto el script debe hacer lo siguiente
+  ```bash
+  #!/bin/bash
+    a2enmod wsgi
+    echo "Se ha habilitado el modulo wsgi"
+  ```
