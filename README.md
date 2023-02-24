@@ -17,6 +17,6 @@ Se pide las instalación, configuración y puesta en marcha de un servidor que o
   - Se habilitará la ejecución de aplicaciones Python con el servidor web 
 Ejercicios|Descripcion
 ----------|-------------------
-[alojamiento](/ProyectoSRI2/Alojamiento.md)
-[acceso](/ProyectoSRI2/ssh_ftp_tls.md)
-[scripts](/ProyectoSRI2/scripts.md)
+[alojamiento](/ProyectoSRI2/Alojamiento.md)|
+[acceso](/ProyectoSRI2/ssh_ftp_tls.md)|
+[scripts](/ProyectoSRI2/scripts.md)|
