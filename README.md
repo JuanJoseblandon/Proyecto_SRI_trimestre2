@@ -15,3 +15,8 @@ Se pide las instalación, configuración y puesta en marcha de un servidor que o
   - Se creará un subdominio en el servidor DNS con las resolución directa e inversa
   - Se creará una base de datos además de un usuario con todos los permisos sobre dicha base de datos (ALL PRIVILEGES)
   - Se habilitará la ejecución de aplicaciones Python con el servidor web 
+Ejercicios|Descripcion
+----------|-------------------
+[alojamiento](/ProyectoSRI2/Alojamiento.md)
+[acceso](/ProyectoSRI2/ssh_ftp_tls.md)
+[scripts](/ProyectoSRI2/scripts.md)
