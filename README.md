@@ -19,6 +19,6 @@ Se pide las instalación, configuración y puesta en marcha de un servidor que o
 
 Ejercicios|Descripcion
 ----------|---------------------------------
-[alojamiento](/ProyectoSRI2/Alojamiento.md)|Instalación de la pila LAMP para el alojamiento de páginas web
-[acceso](/ProyectoSRI2/ssh_ftp_tls.md)|Instalacion y configuración de ssh, sftp y tls para el acceso remoto
-[scripts](/ProyectoSRI2/scripts.md)|Automatización mediante scripts
+[Alojamiento](/ProyectoSRI2/Alojamiento.md)|Instalación de la pila LAMP para el alojamiento de páginas web
+[Acceso](/ProyectoSRI2/ssh_ftp_tls.md)|Instalacion y configuración de ssh, sftp y tls para el acceso remoto
+[Scripts](/ProyectoSRI2/scripts.md)|Automatización mediante scripts
