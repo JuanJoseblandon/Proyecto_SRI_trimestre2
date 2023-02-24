@@ -195,21 +195,24 @@ En mi caso tengo 2 scripts para esto
    ```
 - Se creará una base de datos además de un usuario con todos los permisos sobre dicha base de datos (ALL PRIVILEGES)
      ```bash
-      #!/bin/bash
+     #!/bin/bash
 
-      # Pedir al usuario el nombre de un usuario existente
-      read -p "Introduce el nombre de un usuario existente: " username
+      # Pedir al usuario el nombre de la base de datos y la contraseña
+      read -p "Introduzca el nombre de usuario: " username
+      read -sp "Introduzca la contraseña: " password
 
-      # Crear la base de datos con el nombre del usuario
-      mysql -u root -p -e "CREATE DATABASE $username;"
+      # Crear la base de datos
+      mysql -u root -p -e "CREATE DATABASE IF NOT EXISTS $username; GRANT ALL PRIVILEGES ON $username.* TO '$username'@'localhost' IDENTIFIED BY '$password'; GRANT           USAGE ON phpmyadmin.* TO '$username'@'localhost';"
 
-      # Crear un usuario con todos los privilegios en la base de datos
-      mysql -u root -p -e "GRANT ALL PRIVILEGES ON $username.* TO '$username'@'localhost' IDENTIFIED BY 'password';"
-      mysql -u root -p -e 
+      # Confirmar que la base de datos se creó con éxito
+      if [ $? -eq 0 ]; then
+          echo "La base de datos $username se ha creado con éxito."
+      else
+          echo "No se pudo crear la base de datos $username."
+      fi
 
-      echo "La base de datos $username y el usuario $username con todos los privilegios se han creado correctamente."
      ```
-    Este script pide  un usuario de sistema existente para crear con el una base de datos con su nombre y un usuario con todos los privilegios sobre esta base de datos.
+    Este script pide  un usuario de sistema existente para crear con el una base de datos con su nombre y un usuario con todos los privilegios sobre esta base de datos y tambien le permite la administración de esta atraves de phpmyadmin
     Comprobación
     ![image](https://user-images.githubusercontent.com/91255763/220886543-d537840c-6551-4466-b00d-d9a761cbab55.png)
     ![image](https://user-images.githubusercontent.com/91255763/220886706-934343c1-fdd5-4c68-89f4-9c0d9d8722e2.png)
